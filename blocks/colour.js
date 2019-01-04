@@ -60,7 +60,24 @@ Blockly.defineBlocksWithJsonArray([
     tooltip: '%{BKY_COLOUR_PICKER_TOOLTIP}',
     extensions: ['parent_tooltip_when_inline'],
   },
-
+  //////
+  {
+    type: 'What_colour_picker',
+    message0: '%1',
+    args0: [
+      {
+        type: 'field_colour',
+        name: 'COLOUR',
+        colour: '#ffffff',
+      },
+    ],
+    output: 'Colour',
+    colour: '%{BKY_LOGIC_HUE}',
+    helpUrl: '%{BKY_COLOUR_PICKER_HELPURL}',
+    tooltip: '%{BKY_COLOUR_PICKER_TOOLTIP}',
+    extensions: ['parent_tooltip_when_inline'],
+  },
+  ///////
   // Block for random colour.
   {
     type: 'colour_random',
