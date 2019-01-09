@@ -11,19 +11,22 @@ goog.require('Blockly.JavaScript');
 
 Blockly.JavaScript['What_colour_picker'] = function(block) {
   // Colour picker.
+
+  fetch('http://jsonplaceholder.typicode.com/posts')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(myJson);
+    });
   var code = "'This is: " + block.getFieldValue('COLOUR') + "'";
+
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['text_google'] = function(block) {
   // Text value.
   var code = Blockly.JavaScript.quote_(block.getFieldValue('TEXT'));
-  if ('TEXT' === 'A') {
-    var code = Blockly.JavaScript.quote_(block.getFieldValue('TEXT'));
-  } else
-    var code =
-      "'This is: " + Blockly.JavaScript.quote_(block.getFieldValue('TEXT'));
-
   return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
