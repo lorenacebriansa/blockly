@@ -57,6 +57,6 @@ Blockly.JavaScript['function_url'] = function(block) {
   }
 
   var code = 'The url is: ' + funcName + '(' + args.join(', ') + ');\n';
-  var variable = 'The variable is x ' + x;
+  var variable = 'The variable is x: ' + x;
   return code + variable;
 };
